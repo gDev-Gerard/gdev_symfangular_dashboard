@@ -8,7 +8,7 @@ import { transition, trigger, style, animate } from "@angular/animations";
     templateUrl: './header.html',
     styleUrl: './header.css',
     animations: [
-      trigger('expandContractMenu',
+      trigger('expandMenu',
         [
           transition(':enter', [style({opacity: 1, height: 0}),
             animate('500ms ease-out', style({ opacity: 1, height: '*' }) ) ]),
@@ -20,7 +20,6 @@ import { transition, trigger, style, animate } from "@angular/animations";
 
 export class Header implements OnInit {
   collapsed = signal(false);
-
   ngOnInit() {
     this.collaps();
   }
@@ -28,4 +27,5 @@ export class Header implements OnInit {
   collaps() {
     this.collapsed.set(!this.collapsed());
   }
+
 }

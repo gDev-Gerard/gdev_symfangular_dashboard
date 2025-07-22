@@ -1,26 +1,26 @@
-<nav class="bg-gray-400 text-white p-4 flex flex-col min-h-screen sm:flex-row transition-all duration-300 easy-in-out">
+<nav class="bg-gray-700 text-white min-h-screen p-4 flex flex-col sm:flex-row transition-all duration-200 easy-in-out">
 
-  <button (click)="collapsed.set(!collapsed())" class="md:text-sm ml-2 md:text-gray-300 hover:bg-gray-700 rounded-md p-2">
-    <i class="fa-regular fa-folder"></i>
+  <button (click)="collapsed.set(!collapsed())" class="hover:text-yellow-500 md:text-sm ml-2 md:text-gray-300 bg-gray-700 rounded-md p-2">
+    <i class="fa-regular fa-square-minus"></i>
     Menu
   </button>
 
-  <nav *ngIf="!collapsed()" [@expandContractManu] class="sm:w-1/4 sm:border-gray-700 transition-all duration-500 easy-in-out">
+  <nav *ngIf="!collapsed()" [@expandMenu] class="ml-3 mt-3 sm:w-1/4 sm:border-purple-700 transition-all duration-200 easy-in-out text-white">
 
-    <a href="flex items-center py-4 px-6 rounded-md hover:bg-gray-700 transition-all duration-200 easy-in-out" routerLink="/dashboard"
-      [ngClass]="{ 'bg-gray-600': isActive('/dashboard') }">
-      <i class="fa-regular fa-chart-bar mr-3"></i>
-      Dashboard
+    <a href="" class="sm:w-1/2 flex items-center py-2 px-4 rounded-md hover:text-yellow-500 transition-all duration-200 easy-in-out text-white" routerLink="/dashboard"
+      [ngClass]="{ 'bg-blue-500': isActive('/dashboard') }">
+      <i class="fa-regular fa-folder-closed mr-3"></i>
+      Evento
     </a><br>
-    <a href="flex items-center py-4 px-6 rounded-md hover:bg-gray-700 transition-all duration-200 easy-in-out" routerLink="/forms"
-       [ngClass]="{ 'bg-gray-600': isActive('/forms') }">
+    <a href="" class="sm:w-1/2 flex items-center py-2 px-4 rounded-md hover:text-yellow-500 transition-all duration-200 easy-in-out text-white" routerLink="/forms"
+       [ngClass]="{ 'bg-blue-500': isActive('/forms') }">
       <i class="fa-regular fa-rectangle-list mr-3"></i>
       Formularios
     </a><br>
-    <a href="flex items-center py-4 px-6 rounded-md hover:bg-gray-700 transition-all duration-200 easy-in-out" routerLink="/login"
-       [ngClass]="{ 'bg-gray-600': isActive('/login') }">
+    <a href="" class="sm:w-1/2 flex items-center py-2 px-4 rounded-md hover:text-yellow-500 transition-all duration-200 easy-in-out text-white" routerLink="/login"
+       [ngClass]="{ 'bg-blue-500': isActive('/login') }">
       <i class="fa-solid fa-arrow-right-from-bracket mr-3"></i>
-      LogOut
+      Login-Out
     </a>
 
   </nav>

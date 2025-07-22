@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, inject, signal } from '@angular/core';
 import { animate, style, transition, trigger } from '@angular/animations';
 import { Router, RouterModule, RouterOutlet } from '@angular/router';
+
 //import {filter} from 'rxjs';
 
 
@@ -11,7 +12,7 @@ import { Router, RouterModule, RouterOutlet } from '@angular/router';
   templateUrl: './sidebar.html',
   styleUrl: './sidebar.css',
   animations: [
-    trigger('expandContractMenu',
+    trigger('expandMenu',
       [
         transition(':enter', [style({opacity: 1, height: 0}),
           animate('500ms ease-out', style({ opacity: 1, height: '*' }) ) ]),

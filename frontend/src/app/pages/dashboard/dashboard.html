@@ -1,20 +1,87 @@
-<div class="bg-gray-700 rounded-md shadow-md p-4 mb-4">
-  <h2 class="text-xl font-bold">Evento [EVENTO_ID]</h2>
+<div class="bg-gray-500 rounded-md shadow-md p-4 mb-4">
+  <h2 class="text-xl font-bold">Evento [EVENT_NAME]</h2>
 </div>
 
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-  <div class="bg-gradient-to-br from-gray-700 to-gray-500 rounded-md shadow-md p-10 mb-4">
-    <h2 class="text-xl font-bold">Evento [NOMBRE DEL EVENTO]</h2>
+  <div class="bg-gradient-to-br from-gray-700 to-blue-500 rounded-md shadow-md p-10 mb-4">
+    <h2 class="text-xl font-bold">Evento [EVENT_LOCATION]</h2>
     <p>Contenido de la tarjeta 1</p>
   </div>
-  <div class="bg-gradient-to-br from-gray-700 to-gray-500 rounded-md shadow-md p-10 mb-4">
-    <h2 class="text-xl font-bold">Evolución Económica</h2>
-    <p>Presupuesto: [PRESUPUESTO]</p>
-    <p>Realizado: [PRESUPUESTO - GASTO]</p>
+
+  <div class="bg-gradient-to-br from-gray-700 to-blue-500 rounded-md shadow-md p-10 mb-4">
+    <h2 class="text-xl font-bold">Inversión en el Evento</h2>
+    <p>Presupuesto: [BUDGET]</p>
+    <p>Invertido: [TOTAL_EXPENSE(calc)]</p>
+    <p>Pendiente Inversión: [BUDGET - TOTAL_EXPENSE]</p>
   </div>
-  <div class="bg-gradient-to-br from-gray-700 to-gray-500 rounded-md shadow-md p-10 mb-4">
+
+  <div class="bg-gradient-to-br from-gray-700 to-blue-500 rounded-md shadow-md p-10 mb-4">
     <h2 class="text-xl font-bold">Visitantes</h2>
+    <p>Estimados [VISITORS_INI]: XXXX</p>
+    <p>Reales (a fecha [FECHA]): [VISITORS_REAL(sum from today to date)]</p>
+    <p>Ingresos (a fecha [FECHA]): [INCOME_TOTAL (sum from ini to today)]</p>
+    <p>Ingreso por visitante: [INCOME_TOTAL / VISITORS_REAL] </p>
+  </div>
+
+  <div class="bg-gradient-to-br from-gray-700 to-blue-500 rounded-md shadow-md p-10 mb-4">
+    <h2 class="text-xl font-bold">Fotos del Evento</h2>
+    <p>crear un carrusel con las fotos del repositorio de este evento</p>
+    <img src="../public/festival1.jpg" alt="festival1">
+  </div>
+
+  <div class="bg-gradient-to-br from-gray-700 to-blue-500 rounded-md shadow-md p-10 mb-4">
+    <h2 class="text-xl font-bold">Bar Chart - Income Evolution on Time</h2>
+    <p>Presupuesto: [PRESUPUESTO]</p>
+    <p>Invertido: [GASTO]</p>
+  </div>
+
+  <div class="bg-gradient-to-br from-gray-700 to-blue-500 rounded-md shadow-md p-10 mb-4">
+    <h2 class="text-xl font-bold">Line Chart - Visitantes</h2>
     <p>Estimados: XXXX</p>
     <p>Reales (a fecha [FECHA]): ZZZZ</p>
+    <div class="chart-container">
+      <canvas #chart></canvas>
+    </div>
+  </div>
+</div>
+
+<div class="grid grid-cols-2">
+  <div class="bg-gradient-to-br from-gray-700 to-blue-500 rounded-md shadow-md p-10 mb-4 mr-4">
+    <h2 class="text-xl font-bold">Todo List - Pendientes de Ejecución</h2>
+    <div class="mt-4 overflow-y-auto max-h-48">
+      <div class="flex items-center py-2 border-b border-yellow-400">
+        <div class="font-bold">Fecha Inicio</div>
+        <div class="font-bold ml-6">Titulo</div>
+        <div class="font-bold ml-12">Descripción</div>
+      </div>
+      @for (td of todo; track $index) {
+        <div class="flex items-center py-2 border-b border-yellow-400">
+          <p>{{ td.date | date: "dd/MM/yyyy" }}</p>
+          <p class="ml-6">{{ td.title }}</p>
+          <p class="ml-8">{{ td.description }}</p>
+        </div>
+      }
+      @if(todo.length === 0){
+        <div>No existen más tareas</div>
+      }
+    </div>
+  </div>
+
+  <div class="bg-gradient-to-br from-gray-700 to-blue-500 rounded-md shadow-md p-10 mb-4">
+    <h2 class="text-xl font-bold">Listado de Actuaciones en Evento - Realizadas</h2>
+    <div class="mt-4 overflow-y-auto max-h-48">
+      <div class="flex items-center py-2 border-b border-yellow-400">
+        <div class="font-bold ml-4">Fecha Fin</div>
+        <div class="font-bold ml-6">Actuación</div>
+        <div class="font-bold ml-6">Comentario</div>
+      </div>
+      @for (td of todo; track $index) {
+        <div class="flex items-center py-2 border-b border-yellow-400">
+          <p>{{ td.date | date: "dd/MM/yyyy" }}</p>
+          <p class="ml-6">{{ td.title }}</p>
+          <p class="ml-10">{{ td.description }}</p>
+        </div>
+      }
+    </div>
   </div>
 </div>

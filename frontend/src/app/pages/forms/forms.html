@@ -1,1 +1,49 @@
-<p>forms works!</p>
+<div class="bg-gray-500 rounded-md shadow-md p-4 mb-4">
+  <h2 class="text-xl font-bold">Formularios</h2>
+</div>
+
+<form class="space-y-4 mb-4">
+  <div class="grid grid-cols-1 sm-grid-cols-2 sm-gap-4">
+    <div>
+      <div class="font-semibold text-xl underline mt-4 ml-10 mb-4">Formulario de Ingresos y Gastos</div>
+      <label for="amount" class="text-blue-400 font-medium mt-4 ml-10" >Fecha</label>
+      <input type="text" id="acc_date" placeholder="Fecha" class="ml-4 appearance-none focus:border-b-yellow-500">
+      <label for="amount" class="text-blue-400 font-medium ml-4" >Concepto</label>
+      <input type="text" id="acc_concept" placeholder="Concepto" class="ml-4 appearance-none border-b-yellow-200">
+      <label for="amount" class="text-blue-400 font-medium ml-4" >Importes</label>
+      <input type="text" id="acc_amount" placeholder="Importe (+ / -)" class="ml-4 appearance-none border-b-yellow-200">
+      <button type="submit" class="ml-50 border border-amber-400 p-2 pl-4 pr-4">Guardar</button>
+      <button type="reset" class="ml-10 border border-amber-400 p-2 pl-4 pr-4 rounded-">Borrar</button>
+    </div>
+  </div>
+</form>
+<hr class="border-b-gray-600 m-10">
+<form class="space-y-4 mb-4">
+  <div class="grid grid-cols-1 sm-grid-cols-2 sm-gap-4">
+    <div>
+      <div class="font-semibold text-xl underline mt-4 ml-10 mb-4">Formulario: Visitantes</div>
+      <label for="amount" class="text-blue-400 font-medium mt-4 ml-10" >Fecha </label>
+      <input type="text" id="td_date" placeholder="Fecha (mm/yyyy)" class="ml-4 appearance-none border-b-yellow-200">
+      <label for="amount" class="text-blue-400 font-medium ml-4" >Numero de Visitantes</label>
+      <input type="text" id="td_concept" placeholder="visitantes" class="ml-4 appearance-none border-b-yellow-200">
+      <button type="submit" class="ml-96 border border-amber-400 p-2 pl-4 pr-4">Guardar</button>
+      <button type="reset" class="ml-10 border border-amber-400 p-2 pl-4 pr-4 rounded-">Borrar</button>
+    </div>
+  </div>
+</form>
+<hr class="border-b-gray-600 m-10">
+<form class="space-y-4 mb-4">
+  <div class="grid grid-cols-1 sm-grid-cols-2 sm-gap-4">
+    <div>
+      <div class="font-semibold text-xl underline mt-4 ml-10 mb-4">Formulario: Lista de Tareas</div>
+      <label for="amount" class="text-blue-400 font-medium mt-4 ml-10" >Fecha</label>
+      <input type="text" id="td_date" placeholder="Fecha" class="ml-4 appearance-none border-b-yellow-200">
+      <label for="amount" class="text-blue-400 font-medium ml-4" >Concepto</label>
+      <input type="text" id="td_concept" placeholder="Concepto" class="ml-4 appearance-none border-b-yellow-200">
+      <label for="amount" class="text-blue-400 font-medium ml-4" >Situación</label>
+      <input type="text" id="tc_status" placeholder="Situación" class="ml-4 appearance-none border-b-yellow-200">
+      <button type="submit" class="ml-50 border border-amber-400 p-2 pl-4 pr-4">Guardar</button>
+      <button type="reset" class="ml-10 border border-amber-400 p-2 pl-4 pr-4 rounded-">Borrar</button>
+    </div>
+  </div>
+</form>
