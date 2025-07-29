@@ -1,0 +1,3 @@
+DATABASE_URL="postgresql://codearts:toor@127.0.0.1:5432/dashboard?serverVersion=17&charset=utf8"
+MESSENGER_TRANSPORT_DSN=doctrine://default?auto_setup=0
+MAILER_DSN=null://null
